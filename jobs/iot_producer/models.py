@@ -4,9 +4,7 @@ from datetime import datetime
 
 
 class Vehicle:
-    """
-    Represents a vehicle object with base attributes.
-    """
+
     def __init__(self, vehicle_id, make="Tesla", model="Model S", year=2024, fuel_type="Electric"):
         self.vehicle_id = vehicle_id
         self.make = make
@@ -15,9 +13,7 @@ class Vehicle:
         self.fuel_type = fuel_type
 
     def move(self, latitude, longitude, lat_inc, long_inc):
-        """
-        Moves the vehicle incrementally towards a destination with slight randomness.
-        """
+
         return {
             "latitude": latitude + lat_inc + random.uniform(-0.0005, 0.0005),
             "longitude": longitude + long_inc + random.uniform(-0.0005, 0.0005),
@@ -27,9 +23,7 @@ class Vehicle:
 class VehicleData:
     @staticmethod
     def generate(vehicle_id, timestamp, location):
-        """
-        Generates data about the vehicle’s current state (speed, location, direction, etc.)
-        """
+
         return {
             "id": str(uuid.uuid4()),
             "vehicle_id": vehicle_id,

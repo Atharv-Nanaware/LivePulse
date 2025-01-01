@@ -15,3 +15,11 @@ BIRMINGHAM_COORDINATES = {"latitude": 52.4862, "longitude": -1.8904}
 # Calculate movement increments
 LATITUDE_INCREMENT = (BIRMINGHAM_COORDINATES['latitude'] - LONDON_COORDINATES['latitude']) / 100
 LONGITUDE_INCREMENT = (BIRMINGHAM_COORDINATES['longitude'] - LONDON_COORDINATES['longitude']) / 100
+
+
+# AWS Keys
+
+configuration = {
+    'AWS_ACCESS_KEY': os.getenv('AWS_ACCESS_KEY'),
+    'AWS_SECRET_KEY': os.getenv('AWS_SECRET_KEY'),
+}

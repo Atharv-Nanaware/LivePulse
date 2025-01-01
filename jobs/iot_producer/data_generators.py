@@ -17,16 +17,12 @@ class DataGenerator:
         self.current_location = LONDON_COORDINATES.copy()
 
     def get_next_time(self):
-        """
-        Returns an incremented time to simulate each data generation step.
-        """
+
         self.current_time += timedelta(seconds=random.randint(30, 60))
         return self.current_time
 
     def move_vehicle(self, vehicle):
-        """
-        Simulates the movement of a vehicle towards Birmingham with randomness.
-        """
+
         moved_coords = vehicle.move(
             self.current_location["latitude"],
             self.current_location["longitude"],
@@ -37,9 +33,7 @@ class DataGenerator:
         return moved_coords
 
     def generate_all_data(self, vehicle):
-        """
-        Generates data for each topic in a single step.
-        """
+
         timestamp = self.get_next_time()
         location = self.move_vehicle(vehicle)
 

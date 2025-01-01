@@ -19,7 +19,7 @@ class KafkaProducer:
             value=value,
             on_delivery=callback
         )
-        # flush is optional here, but ensures immediate send
+
         self.producer.flush()
 
     @staticmethod
